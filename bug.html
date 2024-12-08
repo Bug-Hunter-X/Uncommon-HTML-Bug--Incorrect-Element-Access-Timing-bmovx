@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Incorrectly accessing element before it's fully parsed
+    let divElement = document.getElementById('myDiv');
+    divElement.innerHTML = divElement.innerHTML + "<p>Added paragraph.</p>";
+  </script>
+</body>
+</html>
