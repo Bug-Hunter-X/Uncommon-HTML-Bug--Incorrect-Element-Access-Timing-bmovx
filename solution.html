@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+
+  <script>
+    // Correct approach: Wait for DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', function() {
+      let divElement = document.getElementById('myDiv');
+      divElement.innerHTML += "<p>Added paragraph.</p>";
+    });
+  </script>
+</body>
+</html>
